@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 <body>
     <header>
@@ -22,18 +25,16 @@
         </div>
         <div class="text5box">
                 <h1>Содержание</h1>
-                <ol>
-                    <li>Пирамида Хеопса.</li>
-                    <li>Висячие сады Семирамиды</li>
-                    <li>Статуя Зевса в Олимпии</li>
-                    <li>Храм Артемиды в Эфесе</li>
-                    <li>Мавзолей в Галикарнасе</li>
-                    <li>Колосс Родосский</li>
-                    <li>Александрийский маяк</li>
-                </ol>
+                <div class="menu_item"><a class="scroll" href="#block1">Пирамида Хеопса.</a></div>
+                <div class="menu_item"><a class="scroll" href="#block2">Висячие сады Семирамиды</a></div>
+                <div class="menu_item"><a class="scroll" href="#block3">Статуя Зевса в Олимпии</a></div>
+                <div class="menu_item"><a class="scroll" href="#block4">Храм Артемиды в Эфесе</a></div>
+                <div class="menu_item"><a class="scroll" href="#block5">Мавзолей в Галикарнасе</a></div>
+                <div class="menu_item"><a class="scroll" href="#block6">Колосс Родосский</a></div>
+                <div class="menu_item"><a class="scroll" href="#block7">Александрийский маяк</a></div>
         </div>
         <div class="mainbox">
-            <div class="text6box">
+            <div id = 'block1' class="text6box">
                 <div class="qw11">
                     <h1>Пирамида Хеопса.</h1>
                 </div>
@@ -41,12 +42,15 @@
                     <div class="tt">
                         <p>Пирамида Хеопса — самое грандиозное сооружение плато Гиза и единственное сохранившееся до 2025 года чудо света из античного списка. Построенная в XXVI веке до н. э. для фараона Хуфу, она достигает 138,5 метров в высоту и состоит из более чем двух миллионов каменных блоков. Внутри скрыта сложная система коридоров и камер, включая Большую галерею</p>
                     </div>
-                    <img src="1pir.png" alt="">
+                     <div class="slider">
+                        <div><img src="1pir.png"></div>
+                        <div><img src="download.jpg"></div>
+                    </div>
                 </div>
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block2' class="text3box">
                 <h1>Висячие сады Семирамиды</h1>
                 <div class="text2box">
                     <div class="tt">
@@ -57,7 +61,7 @@
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block3' class="text3box">
                 <h1>Статуя Зевса в Олимпии</h1>
                 <div class="text1box">
                     <div class="tt">
@@ -68,7 +72,7 @@
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block4' class="text3box">
                 <h1>Храм Артемиды в Эфесе</h1>
                 <div class="text2box">
                     <div class="tt">
@@ -79,7 +83,7 @@
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block5' class="text3box">
                 <h1>Мавзолей в Галикарнасе</h1>
                 <div class="text1box">
                     <div class="tt">
@@ -90,7 +94,7 @@
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block6' class="text3box">
                 <h1>Колосс Родосский</h1>
                 <div class="text2box">
                     <div class="tt">
@@ -101,7 +105,7 @@
             </div>
 
 
-             <div class="text3box">
+             <div id = 'block7' class="text3box">
                 <h1>Александрийский маяк</h1>
                 <div class="text1box">
                     <div class="tt">
@@ -113,5 +117,22 @@
         </div>
     </main>
     <footer></footer>
+    <script>
+        let links = document.querySelectorAll('.scroll');
+        let targetID;
+        links.forEach(function (element) {
+            element.addEventListener('click', function (event) {
+                event.preventDefault();
+                targetID = element.getAttribute('href');
+                document.querySelector(targetID).scrollIntoView({
+                    behavior: 'smooth',
+                    block:'start'
+                })
+            })
+        })
+        $(document).ready(function () {
+            $('.slider').bxSlider();
+        });
+    </script>
 </body>
 </html>
