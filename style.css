@@ -2,9 +2,6 @@ body{
     background-color: #efeded;
     margin: 0px;
     padding: 0px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }
 header{
     margin: 0px;
@@ -81,27 +78,118 @@ footer{
     width: 300px;
 }
 .text6box{
-    width: 870px;
+    width: 800px;
     margin-top: 30px;
     display: flex;
     flex-wrap:wrap;
     align-content: center;
     justify-content: center;
+    margin-right: 0px;
+
 }
 .qw11{
     width: 700px;
     display: flex;
     justify-content: center;
 }
-@media (max-width:877px){
-    header{
-        width: 100vw;
-        margin: 0px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media (max-width:870px) {
+    .imgg{
+        width: 45%;
+        height: 70%;
+    }
+    .tt{
+        font-size: 16px;
+        width: 200px;
+    }
+    main{
+        width: 100%;
+    }
+    .text6box{
+        width: 600px;
     }
 }
+@media (max-width:600px) {
+    .imgg{
+        width: 300px;
+        height: 200px;
+    }
+    .tt{
+        font-size: 13px;
+        width: 160px;
+    }
+    main{
+        width: 100%;
+    }
+    .text6box{
+        width: 400px;
+    }
+    .text1{
+        font-size: 12px;
+    }
+    .textb{
+        width: 400px;
+    }
+}
+@media (max-width:500px) {
+    .text6box{
+        width: 260px;
+    }
+    .imgg{
+        width: 200px;
+        height: 150px;
+    }
+        .tt{
+        font-size: 10px;
+        width: 160px;
+    }
+}
+@media (max-width:400px) {
+    .imgg{
+        width: 200px;
+        height: 150px;
+    }
+    .tt{
+        font-size: 10px;
+        width: 160px;
+    }
+    .text6box{
+        width: 200px;
+    }
+    .text1{
+        font-size: 12px;
+        width: 250px;
+        margin-left: 30px;
+    }
+    .textb{
+        width: 300px;
+        height: 40px;
+    }
+    h1{
+        font-size: 20px;
+    }
+    .text5box>h1{
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    .text1box{
+        display: flex;
+        flex-flow: column-reverse;
+        margin-left: 60px;
+    }
+    .text2box{
+        display: flex;
+        flex-flow: column-reverse;
+        margin-left: 60px;
+    }
+    .headiv>p{
+        font-size: 20px;
+    }
+}   
 .bx-wrapper {
     width: 300px;
+}
+.superm{
+    display: flex;
+    align-items:center;
+    justify-content: center;
 }
